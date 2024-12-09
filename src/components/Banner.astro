@@ -12,14 +12,12 @@ import sidebar_icon from '../assets/sidebar-icon.png';
 <body>
   <div class="banner">
     <nav class="nav-links">
-      <button class="toggle-sidebar">
-        <Image src={sidebar_icon} alt="Menu" class="menu-icon" />
-      </button>
+      <button class="toggle-sidebar"><Image src={sidebar_icon} alt="Menu" class="social-icon"></button> 
       <div class="links">
         <a href="/">Home</a>
         <a href="/members">Members</a>
         <a href="/logs">Logs</a>
-        <a href="/faq">FAQ</a>
+        <a href="/faq">FAQ</a><br>
       </div>
     </nav>
   </div>
@@ -28,7 +26,7 @@ import sidebar_icon from '../assets/sidebar-icon.png';
     <a href="/">Home</a>
     <a href="/members">Members</a>
     <a href="/logs">Logs</a>
-    <a href="/faq">FAQ</a>
+    <a href="/faq">FAQ</a><br>
   </div>
   
   <script>
@@ -36,9 +34,15 @@ import sidebar_icon from '../assets/sidebar-icon.png';
       const toggleButton = document.querySelector('.toggle-sidebar');
       const sidebar = document.querySelector('.sidebar');
 
-      toggleButton.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-      });
+      if (toggleButton && sidebar) {
+        toggleButton.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+        });
+      } else {
+        console.warn('Toggle button or sidebar is not present in the DOM');
+      }
     });
   </script>
 </body>
+
+
