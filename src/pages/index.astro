@@ -4,9 +4,53 @@ import Banner from '../components/Banner.astro';
 import '../styles/index.css'; 
 import { Image } from 'astro:assets';
 import programming_gif from '../assets/programming.gif';
-const title = "Arun George Saji";
+const title = "SPARK - St. Peter's Advanced Resourceful Koders";
 ---
 
 <Layout title={title}>
   <Banner />
+
+  <main class="home-content">
+    <section class="intro">
+      <h1>Welcome to SPARK!</h1>
+      <p>We are the Hack Club of St. Peter's Senior Secondary School, Kadayiruppu. SPARK stands for St. Peter's Advanced Resourceful Koders—a vibrant community of coders, creators, and innovators.</p>
+    </section>
+
+    <section class="highlights">
+      <h2>Our Mission</h2>
+      <h3>To inspire young minds to code, create, and collaborate. At SPARK, we nurture talent, ignite ideas, and turn imagination into reality.</h3>
+    </section>
+
+    <section class="activities">
+      <h2>What We Do</h2>
+      <div class="highlight-cards">
+        <div class="card">
+          <h3>Hackathons</h3>
+          <p>Challenge yourself to solve real-world problems, build innovative projects, and showcase your creativity during high-energy events.</p>
+        </div>
+        <div class="card">
+          <h3>Weekly Meetings</h3>
+          <p>Gather as a community to discuss progress, share ideas, and collaborate on ongoing and upcoming projects.</p>
+        </div>
+        <div class="card">
+          <h3>Workshops</h3>
+          <p>Hands-on sessions to explore new technologies, tools, and concepts, helping you develop practical skills in coding and beyond.</p>
+        </div>
+      </div>
+      <div class="highlight-cards">
+        <div class="card">
+          <h3>Tech Classes</h3>
+          <p>Dive deep into specific programming languages, frameworks, or technologies through structured learning sessions guided by experts.</p>
+        </div>
+        <div class="card">
+          <h3>Community Projects</h3>
+          <p>Work on impactful initiatives that solve real-world problems and contribute to the community while honing your technical and teamwork skills.</p>
+        </div>
+        <div class="card">
+          <h3>Show & Tell</h3>
+          <p>Present your projects, share innovative ideas, and get valuable feedback from peers to improve and inspire others.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
