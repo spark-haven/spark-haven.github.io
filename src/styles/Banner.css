@@ -1,0 +1,118 @@
+:root {
+  --bg-color: rgba(20, 20, 20, 0.9);
+  --text-color: #fff;
+  --accent-color: #ff5722; 
+  --hover-bg: rgba(255, 87, 34, 0.8);
+  --hover-border: #ff4500;
+  --active-link-bg: rgba(255, 220, 100, 0.8);
+  --shadow-color: rgba(255, 87, 34, 0.5);
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #101010;
+  color: var(--text-color);
+}
+
+.banner {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links .links a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-links .links a:hover {
+  background: var(--hover-bg);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.nav-links .links a.active {
+  background: var(--active-link-bg);
+  color: var(--bg-color);
+  border-color: var(--hover-border);
+  font-weight: bold;
+}
+
+.toggle-sidebar {
+  display: none;
+  background: var(--accent-color);
+  color: var(--text-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  transition: right 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: -5px 0 15px var(--shadow-color);
+}
+
+.sidebar a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: var(--hover-bg);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar.active:hover {
+  box-shadow: -5px 0 25px var(--shadow-color);
+}
+
+@media (max-width: 850px) {
+  .toggle-sidebar {
+    display: block;
+  }
+  .nav-links .links {
+    display: none;
+  }
+}
